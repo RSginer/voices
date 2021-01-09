@@ -9,7 +9,11 @@ import { Voice } from 'src/app/core/models/Voice';
 })
 export class VoiceComponent {
   @Input() voice: Voice | undefined;
+  @Input() isFavourite: boolean = false;
+  @Input() isSelected: boolean = false;
   @Output() favouriteClick = new EventEmitter();
+  @Output() selectVoiceClick = new EventEmitter();
+  favouriteIconVisible: boolean = false;
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -17,8 +21,21 @@ export class VoiceComponent {
     return this.sanitizer.bypassSecurityTrustStyle(`background-image: url(/assets/${this.voice?.icon})`);
   }
 
-  toggleFavourite() {
-    console.log("click")
+  toggleFavourite(event: Event) {
+    event.preventDefault();
     this.favouriteClick.emit(this.voice);
+  }
+
+  showFavouriteIcon() {
+    this.favouriteIconVisible = true;
+  }
+
+  hideFavouriteIcon() {
+    this.favouriteIconVisible = false;
+  }
+
+  selectVoice(event: Event) {
+    event.preventDefault();
+    this.selectVoiceClick.emit(this.voice)
   }
 }

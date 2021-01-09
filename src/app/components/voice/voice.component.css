@@ -8,14 +8,14 @@
     padding: 15px 15px;
     position: relative;
 }
-:host .voice .voice-container {
+:host .voice {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-:host .voice .voice-container .voice-icon {
+:host .voice .voice-icon {
     height: 110px;
     width: 110px;
     border-radius: 100%;
@@ -24,9 +24,26 @@
     background-color: #d1d1d1;
 }
 
-:host .voice .voice-container .voice-name {
+:host .voice .voice-icon.selected {
+    background-color: deepskyblue;
+}
+
+:host .voice .voice-name {
     font-size: 12px;
     margin-top: 5px;
     font-weight: bold;
     
+}
+
+:host .voice .voice-favourite {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border-radius: 100%;
+    background-color: #d1d1d1;
 }

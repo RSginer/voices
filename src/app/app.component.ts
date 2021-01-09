@@ -10,6 +10,7 @@ import { GetVoicesService } from './services/get-voices.service';
 export class AppComponent implements OnInit{
   favouriteVoices: Voice[] = [];
   voices: Voice[] = [];
+  selectedVoice: Voice | undefined;
 
   constructor(
     private getVoicesService: GetVoicesService

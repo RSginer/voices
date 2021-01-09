@@ -1,6 +1,9 @@
-<div class="voice" (click)="toggleFavourite()">
-    <div class="voice-container">
-        <div class="voice-icon" [style]="getBackgroundImage()"></div>
-        <span class="voice-name">{{voice?.name}}</span>
+<div class="voice" (mouseenter)="showFavouriteIcon()" (mouseleave)="hideFavouriteIcon()">
+    <div class="voice-favourite" [style.display]="favouriteIconVisible ? 'flex' : 'none'"  (click)="toggleFavourite($event)">
+        <img [src]="isFavourite ? '/assets/voice-favourite.svg' : '/assets/voice-favourite-off.svg'">
     </div>
+    <div 
+    [ngClass]="{'selected': isSelected}"
+    class="voice-icon" (click)="selectVoice($event)" [style]="getBackgroundImage()"></div>
+    <span class="voice-name">{{voice?.name}}</span>
 </div>

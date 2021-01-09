@@ -2,11 +2,19 @@
   <voicemod-voice 
   *ngFor="let voice of favouriteVoices" 
   [voice]="voice"
-  (favouriteClick)="toggleFavourite($event)"></voicemod-voice>
+  [isFavourite]="true"
+  [isSelected]="selectedVoice?.id === voice.id"
+  (favouriteClick)="toggleFavourite($event)"
+  (selectVoiceClick)="selectedVoice = voice"
+  ></voicemod-voice>
 </voicemod-titled-section>
 <voicemod-titled-section title="Pro voices">
   <voicemod-voice 
   *ngFor="let voice of voices" 
   [voice]="voice"
-  (favouriteClick)="toggleFavourite($event)"></voicemod-voice>
+  [isSelected]="selectedVoice?.id === voice.id"
+  [isFavourite]="favouriteVoices.includes(voice)"
+  (favouriteClick)="toggleFavourite($event)"
+  (selectVoiceClick)="selectedVoice = voice"
+  ></voicemod-voice>
 </voicemod-titled-section>
