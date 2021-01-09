@@ -25,6 +25,7 @@ export class AppComponent implements OnInit{
 
   toggleFavourite(voice: Voice) {
     const favVoice = this.favouriteVoices.find((v) => v.id === voice.id);
+    
     if (!favVoice) {
       this.favouriteVoices = [...this.favouriteVoices, voice]
     } else {
