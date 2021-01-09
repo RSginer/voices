@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  
+  // Fake api
+  apiUrl: "/assets/server"
 };
