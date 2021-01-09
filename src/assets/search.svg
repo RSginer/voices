@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>v copy</title>
+    
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <path d="M23.7,22.3 L20.595,19.195 C21.473,18.024 22,16.576 22,15 C22,11.134 18.866,8 15,8 C11.134,8 8,11.134 8,15 C8,18.866 11.134,22 15,22 C16.576,22 18.024,21.473 19.194,20.595 L22.3,23.7 C22.484,23.884 22.68,24 23,24 C23.553,24 24,23.553 24,23 C24,22.781 23.946,22.546 23.7,22.3 Z M10,15 C10,12.238 12.238,10 15,10 C17.762,10 20,12.238 20,15 C20,17.762 17.762,20 15,20 C12.238,20 10,17.762 10,15 Z" id="search" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

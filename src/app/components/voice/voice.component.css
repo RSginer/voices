@@ -1,0 +1,30 @@
+/* voice */
+
+:host .voice {
+    display: block;
+    float: left;
+    padding: 15px 15px;
+    position: relative;
+}
+:host .voice .voice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+:host .voice .voice-container .voice-icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+    background-color: #d1d1d1;
+}
+
+:host .voice .voice-container .voice-name {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+    
+}

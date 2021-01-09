@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>_Path_</title>
+    
+    <defs>
+        <linearGradient x1="110.714286%" y1="13.2653061%" x2="17.8571429%" y2="86.7346939%" id="linearGradient-1">
+            <stop stop-color="#00E3FF" offset="0%"></stop>
+            <stop stop-color="#00BBFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Voice-pro-selected" transform="translate(-87.000000, -10.000000)" fill="url(#linearGradient-1)">
+            <g id="sdk-titan-2">
+                <g id="Group-3" transform="translate(79.000000, 0.010742)">
+                    <path d="M21.9910874,13.7050026 C21.9911481,12.0090932 20.8347776,10.5297039 19.1838468,10.1135917 C17.532916,9.69747949 15.80906,10.4509162 14.9989611,11.9426578 C14.1888622,10.4509162 12.4650062,9.69747949 10.8140754,10.1135917 C9.16314469,10.5297039 8.00677415,12.0090932 8.00683489,13.7050026 C8.00683489,13.7050026 7.5391281,16.8484501 14.3416435,21.7974018 C14.7193437,22.0675327 15.2280157,22.0675327 15.6057159,21.7974018 C22.5111629,16.9023994 21.9910874,13.7050026 21.9910874,13.7050026 Z" id="_Path_"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

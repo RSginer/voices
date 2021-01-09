@@ -1,0 +1,40 @@
+:host 
+.titled-section {
+    padding: 0px 20px;
+}
+
+:host 
+.titled-section 
+.titled-section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+:host 
+.titled-section
+.titled-section-header
+h4 {
+    flex: 1;
+    text-align: left;
+}
+
+:host 
+.titled-section 
+.titled-section-header
+.separator {
+    display: block;
+    flex: 1;
+    margin-left: 10px;
+    height: 1px;
+    background-color: #2d2d2d;
+}
+
+:host 
+.titled-section
+.titled-section-body {
+    width: 100%;
+    display: block;
+    float: left;
+}
