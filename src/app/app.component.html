@@ -1,13 +1,11 @@
-
-
 <div class="app-wrapper">
   <div class="header-container">
     <div class="header">
       <div class="left-side">
         <div class="search-container">
           <img src="/assets/search.svg">
-          <input type="text" class="search">
-          <img src="/assets/search-close.svg">
+          <input type="text" [(ngModel)]="activeSearch" class="search">
+          <img *ngIf="activeSearch" (click)="activeSearch = null" src="/assets/search-close.svg">
         </div>
       </div>
       <div class="right-side">
@@ -17,12 +15,12 @@
   </div>
   <div class="body-container">
     <voicemod-titled-section title="Favourite voices">
-      <voicemod-voice *ngFor="let voice of favouriteVoices" [voice]="voice" [isFavourite]="true"
+      <voicemod-voice *ngFor="let voice of favouriteVoices | search: activeSearch" [voice]="voice" [isFavourite]="true"
         [isSelected]="selectedVoice?.id === voice.id" (favouriteClick)="toggleFavourite($event)"
         (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
     </voicemod-titled-section>
     <voicemod-titled-section title="Pro voices">
-      <voicemod-voice *ngFor="let voice of voices" [voice]="voice" [isSelected]="selectedVoice?.id === voice.id"
+      <voicemod-voice *ngFor="let voice of voices| search: activeSearch" [voice]="voice" [isSelected]="selectedVoice?.id === voice.id"
         [isFavourite]="favouriteVoices.includes(voice)" (favouriteClick)="toggleFavourite($event)"
         (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
     </voicemod-titled-section>

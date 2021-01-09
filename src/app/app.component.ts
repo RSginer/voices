@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
   favouriteVoices: Voice[] = [];
   voices: Voice[] = [];
   selectedVoice: Voice | undefined;
+  activeSearch: string | undefined;
 
   constructor(
     private getVoicesService: GetVoicesService

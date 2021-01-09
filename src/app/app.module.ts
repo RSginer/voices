@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { VoiceComponent } from './components/voice/voice.component';
 import { TitledSectionComponent } from './components/titled-section/titled-section.component';
 import { GetVoicesService } from './services/get-voices.service';
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoiceComponent,
-    TitledSectionComponent
+    TitledSectionComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     GetVoicesService

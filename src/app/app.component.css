@@ -2,7 +2,7 @@
     background-color: #212121;
     display: flex;
     align-self: center;
-    padding: 20px;
+    padding: 25px;
     margin: 0 auto;
     max-width: 1200px;
     flex-direction: column;
@@ -10,6 +10,7 @@
 }
 
 :host .body-container {
+    width: 100%;
     max-width: 1160px;
     margin: 0 auto;
 }
@@ -54,10 +55,15 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 0px 10px;
+    margin-left: -15px;
+    cursor: pointer;
 }
 
 :host .header .search-container input {
     border: none;
     outline: none;
     color: white;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
