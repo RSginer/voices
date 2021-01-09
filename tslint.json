@@ -146,6 +146,7 @@
       true,
       "element",
       "app",
+      "voicemod",
       "kebab-case"
     ]
   }

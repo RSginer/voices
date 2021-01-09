@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "voices"
+  "defaultProject": "voices",
+  "cli": {
+    "analytics": "f63c4dc0-2c01-43a4-9b06-d5e3d45f2159"
+  }
 }
