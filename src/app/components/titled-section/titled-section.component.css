@@ -37,4 +37,5 @@ h4 {
     width: 100%;
     display: block;
     float: left;
+    min-height: 165px;
 }

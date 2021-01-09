@@ -1,3 +1,7 @@
+:host {
+    cursor: pointer;
+}
+
 :host .voice {
     display: block;
     float: left;
@@ -12,8 +16,8 @@
 }
 
 :host .voice .voice-container .voice-icon {
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 110px;
     border-radius: 100%;
     background-position: center;
     background-size: contain;

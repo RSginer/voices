@@ -8,7 +8,7 @@ import { GetVoicesService } from './services/get-voices.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  favoriteVoices: Voice[] = [];
+  favouriteVoices: Voice[] = [];
   voices: Voice[] = [];
 
   constructor(
@@ -21,5 +21,14 @@ export class AppComponent implements OnInit{
       (voices: Voice[]) => {
         this.voices = voices;
     }, (err) => console.log(err))
+  }
+
+  toggleFavourite(voice: Voice) {
+    const favVoice = this.favouriteVoices.find((v) => v.id === voice.id);
+    if (!favVoice) {
+      this.favouriteVoices = [...this.favouriteVoices, voice]
+    } else {
+      this.favouriteVoices = this.favouriteVoices.filter((v) => v.id !== voice.id)
+    }
   }
 }

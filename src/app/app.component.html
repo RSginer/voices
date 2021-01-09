@@ -1,3 +1,12 @@
+<voicemod-titled-section title="Favourite voices">
+  <voicemod-voice 
+  *ngFor="let voice of favouriteVoices" 
+  [voice]="voice"
+  (favouriteClick)="toggleFavourite($event)"></voicemod-voice>
+</voicemod-titled-section>
 <voicemod-titled-section title="Pro voices">
-  <voicemod-voice *ngFor="let voice of voices"></voicemod-voice>
+  <voicemod-voice 
+  *ngFor="let voice of voices" 
+  [voice]="voice"
+  (favouriteClick)="toggleFavourite($event)"></voicemod-voice>
 </voicemod-titled-section>
