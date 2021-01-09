@@ -4,6 +4,8 @@
     </div>
     <div 
     [ngClass]="{'selected': isSelected}"
-    class="voice-icon" (click)="selectVoice($event)" [style]="getBackgroundImage()"></div>
+    class="voice-icon" (click)="selectVoice($event)">
+        <img [src]="'/assets/' + this.voice?.icon">
+    </div>
     <span class="voice-name">{{voice?.name}}</span>
 </div>

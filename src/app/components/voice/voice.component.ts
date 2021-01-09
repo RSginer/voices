@@ -18,7 +18,7 @@ export class VoiceComponent {
   constructor(private sanitizer: DomSanitizer) {}
 
   getBackgroundImage() {
-    return this.sanitizer.bypassSecurityTrustStyle(`background-image: url(/assets/${this.voice?.icon})`);
+    return this.sanitizer.bypassSecurityTrustStyle(`background-image: url()`);
   }
 
   toggleFavourite(event: Event) {

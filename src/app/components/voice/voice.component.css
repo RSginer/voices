@@ -25,7 +25,8 @@
 }
 
 :host .voice .voice-icon.selected {
-    background-color: deepskyblue;
+    background: rgb(0,148,255);
+    background: linear-gradient(45deg, rgba(0,148,255,1) 35%, rgba(0,227,255,1) 100%);
 }
 
 :host .voice .voice-name {
