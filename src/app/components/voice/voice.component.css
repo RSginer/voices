@@ -24,9 +24,13 @@
     background-color: #d1d1d1;
 }
 
-:host .voice .voice-icon.selected {
+:host .voice.selected .voice-icon {
     background: rgb(0,148,255);
-    background: linear-gradient(45deg, rgba(0,148,255,1) 35%, rgba(0,227,255,1) 100%);
+    background: linear-gradient(45deg, rgba(0,193,252,1) 35%, rgba(0,227,255,1) 100%);
+}
+
+:host .voice.selected .voice-name {
+    color: rgb(0,193,255);
 }
 
 :host .voice .voice-name {
@@ -47,4 +51,9 @@
     right: 15px;
     border-radius: 100%;
     background-color: #d1d1d1;
+}
+
+:host .voice.favourite .voice-favourite,
+:host .voice.favourite .voice-icon {
+    background-color: white;
 }
