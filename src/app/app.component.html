@@ -1,10 +1,20 @@
+
+
 <div class="app-wrapper">
-  <div class="voices-header">
-    <div class="header-container">
-      <p>Test</p>
+  <div class="header-container">
+    <div class="header">
+      <div class="left-side">
+        <div class="search-container">
+          <img src="/assets/search.svg">
+          <input type="text" class="search">
+          <img src="/assets/search-close.svg">
+        </div>
+      </div>
+      <div class="right-side">
+        <img src="/assets/button-random.svg">
+      </div>
     </div>
   </div>
-
   <div class="body-container">
     <voicemod-titled-section title="Favourite voices">
       <voicemod-voice *ngFor="let voice of favouriteVoices" [voice]="voice" [isFavourite]="true"
@@ -18,4 +28,7 @@
     </voicemod-titled-section>
   </div>
 
+</div>
+<div class="signature">
+  <p>Made with ❤️ by <a href="https://github.com/rsginer">@RSGiner</a></p>
 </div>

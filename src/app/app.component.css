@@ -10,12 +10,54 @@
 }
 
 :host .body-container {
-    max-width: 1024px;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
-:host .header-container {
-    max-width: 1100px;
-    padding: 0px 20px;
-    margin: 0 auto;
+
+:host .signature p {
+    text-align: center;
+    font-size: 11px;
+    text-transform: none;
+}
+
+:host .signature p a {
+    color: rgb(126, 201, 255);
+}
+
+/* header */
+:host .header {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+:host .header .left-side, :host .header .right-side {
+    display: block;
+}
+
+/* search */
+:host .header .search-container {
+    display: flex;
+}
+
+:host .header .search-container img, :host .header .search-container input {
+    background-color: black;
+}
+
+:host .header .search-container img:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+:host .header .search-container img:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0px 10px;
+}
+
+:host .header .search-container input {
+    border: none;
+    outline: none;
+    color: white;
 }
