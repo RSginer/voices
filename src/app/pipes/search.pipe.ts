@@ -20,9 +20,7 @@ export class SearchPipe implements PipeTransform {
     if (searchText) {
       searchText = searchText.toLocaleLowerCase();
 
-      return items.filter(it => {
-        return it.name.toLocaleLowerCase().includes(searchText || "");
-      });
+      return items.filter(it => it.name.toLocaleLowerCase().includes(searchText || ""));
     }
 
 
