@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Voice } from './core/models/Voice';
 import { GetVoicesService } from './services/get-voices.service';
 
+
+export interface ITagFilter {
+  id: number;
+  tag: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,8 +18,8 @@ export class AppComponent implements OnInit{
   voices: Voice[] = [];
   selectedVoice: Voice | undefined;
   activeSearch: string | undefined;
-  tags: string[] = [];
-  selectedTag: string | undefined;
+  tags: ITagFilter[] = [{id: 0, tag: "All"}];
+  selectedTag: number = 0;
 
   constructor(
     private getVoicesService: GetVoicesService
@@ -25,11 +31,15 @@ export class AppComponent implements OnInit{
       (voices: Voice[]) => {
         this.voices = voices;
         this.selectedVoice = voices[0];
+        let tagId = 0;
+
         this.voices.map((voice) => voice.tags.map((tag) => {
-          if (!this.tags.includes(tag)) this.tags.push(tag)
+          tagId++;
+          if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag === tag)) this.tags.push({id: tagId, tag:tag})
         }))
 
         this.tags = [...this.tags];
+        console.log(this.tags)
     }, (err) => console.log(err))
   }
 
@@ -43,7 +53,7 @@ export class AppComponent implements OnInit{
     }
   }
 
-  changeTag(tag: string) {
+  changeTag(tag: ITagFilter) {
     this.selectedTag = tag; 
   }
 

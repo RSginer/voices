@@ -78,3 +78,28 @@
 :host .random {
     cursor: pointer;
 }
+
+/* select */
+:host ng-select.voicemod-select {
+    width: 150px;
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-select-container .ng-arrow-wrapper .ng-arrow {
+    background-image: url(/assets/select-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    transform: rotate(180deg);
+}
+
+ng-select.voicemod-select ::ng-deep .ng-select-container .ng-arrow-wrapper .ng-arrow {
+    background-image: url(/assets/select-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+}

@@ -9,6 +9,8 @@
         </div>
       </div>
       <div class="right-side">
+        <ng-select class="voicemod-select" [clearable]="false" [items]="tags" bindLabel="tag" bindValue="id" [(ngModel)]="selectedTag">
+        </ng-select>
         <img (click)="randomSelection()" class="random" src="/assets/button-random.svg">
       </div>
     </div>

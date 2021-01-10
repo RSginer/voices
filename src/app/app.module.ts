@@ -7,6 +7,7 @@ import { TitledSectionComponent } from './components/titled-section/titled-secti
 import { GetVoicesService } from './services/get-voices.service';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchPipe } from './pipes/search.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgSelectModule
   ],
   providers: [
     GetVoicesService
