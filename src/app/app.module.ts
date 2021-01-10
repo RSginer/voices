@@ -25,7 +25,8 @@ import { SortPipe } from './pipes/sort.pipe';
     NgSelectModule
   ],
   providers: [
-    GetVoicesService
+    GetVoicesService,
+    SearchPipe
   ],
   bootstrap: [AppComponent]
 })

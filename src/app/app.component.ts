@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Voice } from './core/models/Voice';
+import { SearchPipe } from './pipes/search.pipe';
 import { GetVoicesService } from './services/get-voices.service';
 
 export interface ITagFilter {
@@ -31,7 +32,8 @@ export class AppComponent implements OnInit {
   selectedTag: number = 0;
 
   constructor(
-    private getVoicesService: GetVoicesService
+    private getVoicesService: GetVoicesService,
+    private searchPipe: SearchPipe
   ) { }
 
 
@@ -70,9 +72,11 @@ export class AppComponent implements OnInit {
   }
 
   randomSelection() {
-    const index = Math.floor(Math.random() * this.voices.length);
-
-    this.selectedVoice = this.voices[index];
+    const filteredVoices = this.searchPipe.transform(this.voices, this.activeSearch, this.getCurrentTag(this.selectedTag) || "All")
+    const index = Math.floor(Math.random() * filteredVoices.length);
+    const randomVoiceId = filteredVoices[index].id;
+  
+    this.selectedVoice = this.voices.find((voice) => voice.id === randomVoiceId);
   }
 
   getCurrentTag(selectedTagId: number) {
