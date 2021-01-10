@@ -1,6 +1,6 @@
 body {
     background-color: #1b1b1b;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: Barlow, Roboto, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,4 +12,17 @@ h1, h2, h3, h4, h5, h6 {
 
 p, span, label {
     color: #d0d0d0;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url('/assets/fonts/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: Barlow;
+    src: url('/assets/fonts/Barlow-Bold.ttf') format('truetype');
+    font-weight: bold;
 }
