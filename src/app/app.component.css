@@ -74,16 +74,3 @@
     width: 200px;
     font-size: 16px;
 }
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;       /* Remove default arrow */
-    background-image: url(/assets/select-arrow.svg);   /* Add custom arrow */
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: black;
-    border: none;
-    padding: 5px 10px;
-    outline: none;
- }
