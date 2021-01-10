@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Voice } from 'src/app/core/models/Voice';
 
 @Component({
@@ -14,12 +13,6 @@ export class VoiceComponent {
   @Output() favouriteClick = new EventEmitter();
   @Output() selectVoiceClick = new EventEmitter();
   favouriteIconVisible: boolean = false;
-
-  constructor(private sanitizer: DomSanitizer) { }
-
-  getBackgroundImage() {
-    return this.sanitizer.bypassSecurityTrustStyle(`background-image: url()`);
-  }
 
   toggleFavourite(event: Event) {
     event.preventDefault();
