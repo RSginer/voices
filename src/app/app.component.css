@@ -60,6 +60,10 @@
     margin-right: 5px;
 }
 
+:host .header .sort {
+    margin-left: 30px;
+}
+
 /* search */
 
 :host .header .search-container {
@@ -189,6 +193,9 @@
     }
     :host .header .right-side {
         width: 100%;
+    }
+    :host .header .sort {
+        margin-left: 0px;
     }
 }
 
