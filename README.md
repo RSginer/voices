@@ -1,7 +1,7 @@
 # Voices
 <span style="display:block;text-align:center">
 
-![alt text](https://raw.githubusercontent.com/RSginer/voices/master/screen-record.gif "Voices")
+![alt text](https://raw.githubusercontent.com/RSginer/voices/master/screenrecord.gif "Voices")
 
 </span>
 
