@@ -32,6 +32,10 @@
     background: linear-gradient(45deg, rgba(0, 193, 252, 1) 35%, rgba(0, 227, 255, 1) 100%);
 }
 
+:host .voice .voice-name {
+    cursor: pointer;
+}
+
 :host .voice.selected .voice-name {
     color: rgb(0, 193, 255);
 }
@@ -56,6 +60,7 @@
     align-items: center;
     cursor: pointer;
     position: absolute;
+    z-index: 1;
     top: 0px;
     right: 0px;
     border-radius: 100%;

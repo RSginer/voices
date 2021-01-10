@@ -15,7 +15,6 @@ export class VoiceComponent {
   favouriteIconVisible: boolean = false;
 
   toggleFavourite(event: Event) {
-    event.preventDefault();
     this.favouriteClick.emit(this.voice);
   }
 
@@ -28,7 +27,6 @@ export class VoiceComponent {
   }
 
   selectVoice(event: Event) {
-    event.preventDefault();
     this.selectVoiceClick.emit(this.voice)
   }
 }

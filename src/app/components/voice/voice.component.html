@@ -1,11 +1,11 @@
 <div [ngClass]="{'selected': isSelected, 'favourite': isFavourite}" class="voice" (mouseenter)="showFavouriteIcon()"
     (mouseleave)="hideFavouriteIcon()">
-    <div class="voice-icon" (click)="selectVoice($event)">
+    <div class="voice-icon">
         <div class="voice-favourite" [style.display]="favouriteIconVisible ? 'flex' : 'none'"
             (click)="toggleFavourite($event)">
             <img [src]="isFavourite ? '/assets/voice-favourite.svg' : '/assets/voice-favourite-off.svg'">
         </div>
-        <img [src]="'/assets/' + this.voice?.icon">
+        <img (click)="selectVoice($event)" [src]="'/assets/' + this.voice?.icon">
     </div>
-    <span class="voice-name">{{voice?.name}}</span>
+    <span (click)="selectVoice($event)" class="voice-name">{{voice?.name}}</span>
 </div>
