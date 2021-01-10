@@ -8,22 +8,32 @@ export interface ITagFilter {
   tag: string;
 }
 
+export interface ISortOption {
+  id: number;
+  option: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   favouriteVoices: Voice[] = [];
   voices: Voice[] = [];
   selectedVoice: Voice | undefined;
   activeSearch: string | undefined;
-  tags: ITagFilter[] = [{id: 0, tag: "All"}];
+  sortOptions: ISortOption[] = [
+    { id: 0, option: "A-Z" },
+    { id: 1, option: "Popular"}
+  ];
+  selectedSortOption = 0;
+  tags: ITagFilter[] = [{ id: 0, tag: "All" }];
   selectedTag: number = 0;
 
   constructor(
     private getVoicesService: GetVoicesService
-  ) {}
+  ) { }
 
 
   ngOnInit(): void {
@@ -33,21 +43,26 @@ export class AppComponent implements OnInit{
         this.selectedVoice = voices[0];
         let tagId = 0;
 
-        this.voices.map((voice) => voice.tags.map((tag) => {
-          tagId++;
+        this.voices.map((voice) => {
+          
+          // Random popularity to sort later (I can't do with the provided data)
+          voice.popularity = Math.floor(Math.random() * 10);
+          
+          voice.tags.map((tag) => {
+            tagId++;
 
-          if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag.toLocaleLowerCase() === tag.toLocaleLowerCase())) this.tags.push(
-            {id: tagId, tag:tag.charAt(0).toUpperCase() + tag.slice(1)})
-        }))
+            if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag.toLocaleLowerCase() === tag.toLocaleLowerCase())) this.tags.push(
+              { id: tagId, tag: tag.charAt(0).toUpperCase() + tag.slice(1) })
+          })
+        })
 
         this.tags = [...this.tags];
-        console.log(this.tags)
-    }, (err) => console.log(err))
+      }, (err) => console.log(err))
   }
 
   toggleFavourite(voice: Voice) {
     const favVoice = this.favouriteVoices.find((v) => v.id === voice.id);
-    
+
     if (!favVoice) {
       this.favouriteVoices = [...this.favouriteVoices, voice]
     } else {

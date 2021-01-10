@@ -8,13 +8,15 @@ import { GetVoicesService } from './services/get-voices.service';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoiceComponent,
     TitledSectionComponent,
-    SearchPipe
+    SearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
