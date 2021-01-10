@@ -43,11 +43,13 @@
     width: 435px;
 }
 
+
+
 :host .header .left-side {
     justify-content: flex-start;
 }
 
-:host .header .right-side {
+:host .header .right-side .filters-container {
     justify-content: flex-end;
 }
 
