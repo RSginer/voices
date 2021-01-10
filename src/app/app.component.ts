@@ -28,6 +28,8 @@ export class AppComponent implements OnInit{
         this.voices.map((voice) => voice.tags.map((tag) => {
           if (!this.tags.includes(tag)) this.tags.push(tag)
         }))
+
+        this.tags = [...this.tags];
     }, (err) => console.log(err))
   }
 
