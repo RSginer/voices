@@ -44,4 +44,10 @@ export class AppComponent implements OnInit{
   changeTag(tag: string) {
     this.selectedTag = tag; 
   }
+
+  randomSelection() {
+    const index = Math.floor(Math.random() * this.voices.length);
+
+    this.selectedVoice = this.voices[index];
+  }
 }
