@@ -41,6 +41,11 @@
     width: 435px;
 }
 
+:host .reverse-icon {
+    transform: rotate(180deg) scaleX(-1);
+    
+}
+
 /* search */
 :host .header .search-container {
     display: flex;

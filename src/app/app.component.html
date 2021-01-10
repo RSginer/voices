@@ -16,7 +16,7 @@
           </ng-select>
         </div>
         <div class="sort">
-          <img class="filter-icon" src="/assets/order.svg">
+          <img [ngClass]="{'reverse-icon': selectedSortOption === 0}" class="filter-icon" src="/assets/order.svg">
           <ng-select class="voicemod-select" [clearable]="false" [items]="sortOptions" bindLabel="option" bindValue="id"
             [(ngModel)]="selectedSortOption">
           </ng-select>
