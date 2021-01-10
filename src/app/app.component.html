@@ -11,7 +11,7 @@
       <div class="right-side">
         <div class="tags-filter">
           <img class="filter-icon" src="/assets/filter.svg">
-          <ng-select  class="voicemod-select" [clearable]="false" [items]="tags" bindLabel="tag" bindValue="id"
+          <ng-select class="voicemod-select" [clearable]="false" [items]="tags" bindLabel="tag" bindValue="id"
             [(ngModel)]="selectedTag">
           </ng-select>
         </div>
@@ -27,13 +27,15 @@
   </div>
   <div class="container">
     <voicemod-titled-section title="Favourite voices">
-      <voicemod-voice *ngFor="let voice of favouriteVoices | search: activeSearch :  getCurrentTag(selectedTag) | sortVoices: selectedSortOption" [voice]="voice" [isFavourite]="true"
-        [isSelected]="selectedVoice?.id === voice.id" (favouriteClick)="toggleFavourite($event)"
-        (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
+      <voicemod-voice
+        *ngFor="let voice of favouriteVoices | search: activeSearch :  getCurrentTag(selectedTag) | sortVoices: selectedSortOption"
+        [voice]="voice" [isFavourite]="true" [isSelected]="selectedVoice?.id === voice.id"
+        (favouriteClick)="toggleFavourite($event)" (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
     </voicemod-titled-section>
     <voicemod-titled-section title="Pro voices">
-      <voicemod-voice *ngFor="let voice of voices| search: activeSearch : getCurrentTag(selectedTag)| sortVoices: selectedSortOption" [voice]="voice"
-        [isSelected]="selectedVoice?.id === voice.id" [isFavourite]="favouriteVoices.includes(voice)"
+      <voicemod-voice
+        *ngFor="let voice of voices| search: activeSearch : getCurrentTag(selectedTag)| sortVoices: selectedSortOption"
+        [voice]="voice" [isSelected]="selectedVoice?.id === voice.id" [isFavourite]="favouriteVoices.includes(voice)"
         (favouriteClick)="toggleFavourite($event)" (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
     </voicemod-titled-section>
   </div>
