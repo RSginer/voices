@@ -7,6 +7,7 @@
 
 ### Features
   - ✅ Favourites voices list.
+  - ✅ Add and remove voice to favourites.
   - ✅ Pro Voices list
   - ✅ Filter voices by tag.
   - ✅ Order voices ascendent/descendent.
