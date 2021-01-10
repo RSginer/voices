@@ -1,6 +1,9 @@
 # Voices
+<span style="display:block;text-align:center">
 
-Voices grid
+![alt text](https://raw.githubusercontent.com/RSginer/voices/master/screen-record.gif "Voices")
+
+</span>
 
 ### Features
   - ✅ Favourites voices list.
