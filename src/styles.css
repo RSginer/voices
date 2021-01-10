@@ -16,7 +16,7 @@ p, span, label {
 
 @font-face {
     font-family: Barlow;
-    src: url('/assets/fonts/Barlow-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/Barlow-Medium.ttf') format('truetype');
     font-weight: normal;
 }
 
