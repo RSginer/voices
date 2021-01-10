@@ -75,4 +75,11 @@ export class AppComponent implements OnInit {
   getCurrentTag(selectedTagId: number) {
     return this.tags.find((tag) => tag.id === selectedTagId)?.tag || "All";
   }
+
+  selectVoice(voice: Voice) {
+    if (this.selectedVoice === voice) 
+      this.selectedVoice = undefined;
+    else
+      this.selectedVoice = voice;
+  }
 }

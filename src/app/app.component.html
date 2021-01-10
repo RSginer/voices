@@ -30,13 +30,13 @@
       <voicemod-voice
         *ngFor="let voice of favouriteVoices | search: activeSearch :  getCurrentTag(selectedTag) | sortVoices: selectedSortOption"
         [voice]="voice" [isFavourite]="true" [isSelected]="selectedVoice?.id === voice.id"
-        (favouriteClick)="toggleFavourite($event)" (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
+        (favouriteClick)="toggleFavourite($event)" (selectVoiceClick)="selectVoice($event)"></voicemod-voice>
     </voicemod-titled-section>
     <voicemod-titled-section title="Pro voices">
       <voicemod-voice
         *ngFor="let voice of voices| search: activeSearch : getCurrentTag(selectedTag)| sortVoices: selectedSortOption"
         [voice]="voice" [isSelected]="selectedVoice?.id === voice.id" [isFavourite]="favouriteVoices.includes(voice)"
-        (favouriteClick)="toggleFavourite($event)" (selectVoiceClick)="selectedVoice = voice"></voicemod-voice>
+        (favouriteClick)="toggleFavourite($event)" (selectVoiceClick)="selectVoice($event)"></voicemod-voice>
     </voicemod-titled-section>
   </div>
 </div>
