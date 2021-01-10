@@ -1,5 +1,5 @@
 :host .titled-section {
-    padding: 0px 40px;
+    padding: 0px 20px;
 }
 
 :host .titled-section h3 {
@@ -35,6 +35,7 @@
 }
 
 /* media queries */
+
 @media screen and (max-width: 1020px) {
     :host .titled-section {
         padding: 0px;

@@ -9,19 +9,21 @@
         </div>
       </div>
       <div class="right-side">
-        <div class="tags-filter">
-          <img class="filter-icon" src="/assets/filter.svg">
-          <ng-select class="voicemod-select" [clearable]="false" [items]="tags" bindLabel="tag" bindValue="id"
-            [(ngModel)]="selectedTag">
-          </ng-select>
+        <div class="filters-container">
+          <div class="tags-filter">
+            <img class="filter-icon" src="/assets/filter.svg">
+            <ng-select class="voicemod-select" [clearable]="false" [items]="tags" bindLabel="tag" bindValue="id"
+              [(ngModel)]="selectedTag">
+            </ng-select>
+          </div>
+          <div class="sort">
+            <img [ngClass]="{'reverse-icon': selectedSortOption === 0}" class="filter-icon" src="/assets/order.svg">
+            <ng-select class="voicemod-select" [clearable]="false" [items]="sortOptions" bindLabel="option" bindValue="id"
+              [(ngModel)]="selectedSortOption">
+            </ng-select>
+          </div>
+          <img (click)="randomSelection()" class="random" src="/assets/button-random.svg">
         </div>
-        <div class="sort">
-          <img [ngClass]="{'reverse-icon': selectedSortOption === 0}" class="filter-icon" src="/assets/order.svg">
-          <ng-select class="voicemod-select" [clearable]="false" [items]="sortOptions" bindLabel="option" bindValue="id"
-            [(ngModel)]="selectedSortOption">
-          </ng-select>
-        </div>
-        <img (click)="randomSelection()" class="random" src="/assets/button-random.svg">
       </div>
     </div>
   </div>

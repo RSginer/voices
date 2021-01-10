@@ -2,7 +2,7 @@
     background-color: #212121;
     display: flex;
     align-self: center;
-    padding: 10px 20px;
+    padding: 13px 25px;
     margin: 0 auto;
     max-width: 1106px;
     flex-direction: column;
@@ -16,6 +16,7 @@
 }
 
 /* signature */
+
 :host .signature p {
     text-align: center;
     font-size: 11px;
@@ -28,6 +29,7 @@
 }
 
 /* header */
+
 :host .header {
     margin-bottom: 50px;
     width: 100%;
@@ -35,7 +37,7 @@
     justify-content: space-between;
 }
 
-:host .header .left-side, :host .header .right-side {
+:host .header .left-side, :host .header .right-side .filters-container {
     display: flex;
     align-items: center;
     width: 435px;
@@ -51,16 +53,15 @@
 
 :host .reverse-icon {
     transform: rotate(180deg) scaleX(-1);
-    
 }
 
 :host .header .filter-icon {
     width: 28px;
-    margin-left: 15px;
     margin-right: 5px;
 }
 
 /* search */
+
 :host .header .search-container {
     display: flex;
 }
@@ -101,11 +102,8 @@
     align-items: center;
 }
 
-:host .header .sort {
-    margin-left: 40px;
-}
-
 /* random */
+
 :host .random {
     cursor: pointer;
     margin-left: 20px;
@@ -113,6 +111,7 @@
 }
 
 /* select */
+
 :host ng-select.voicemod-select {
     width: 126px;
     background-color: black;
@@ -142,8 +141,7 @@
     border-top: 1px solid #282828;
 }
 
-:host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option, 
-:host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option span {
+:host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option, :host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option span {
     color: #9e9e9e;
     font-weight: bold;
     font-size: 14px;
@@ -166,8 +164,9 @@
 }
 
 /* media queries */
+
 @media screen and (max-width: 1020px) {
-    :host .app-wrapper{
+    :host .app-wrapper {
         padding: 10px;
     }
 }
@@ -177,11 +176,16 @@
         display: block;
         float: left;
     }
-    :host .header .left-side {
+    :host .header .left-side, :host .header .right-side {
         display: block;
         float: left;
         margin: 0 auto;
+        width: 100%;
         margin-bottom: 20px;
+    }
+    :host .header .left-side .search-container, :host .header .right-side .filters-container {
+        justify-content: center;
+        width: 100%;
     }
     :host .header .right-side {
         width: 100%;
@@ -189,7 +193,7 @@
 }
 
 @media screen and (max-width: 440px) {
-    :host ng-select.voicemod-select {
+    :host ng-select.voicemod-select, :host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-dropdown-panel {
         width: 100px;
     }
     :host .header .sort {
