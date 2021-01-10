@@ -4,7 +4,7 @@
     align-self: center;
     padding: 10px 20px;
     margin: 0 auto;
-    max-width: 1006px;
+    max-width: 1106px;
     flex-direction: column;
     border-radius: 6px;
 }
@@ -56,6 +56,8 @@
 
 :host .header .filter-icon {
     width: 28px;
+    margin-left: 15px;
+    margin-right: 5px;
 }
 
 /* search */
@@ -95,7 +97,7 @@
 :host .header .tags-filter, :host .sort {
     display: flex;
     width: 160px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -116,8 +118,8 @@
     background-color: black;
     border-radius: 5px;
     padding-left: 15.4px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
     padding-right: 15.4px;
     font-size: 14px;
 }
@@ -164,7 +166,13 @@
 }
 
 /* media queries */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1020px) {
+    :host .app-wrapper{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 740px) {
     :host .header {
         display: block;
         float: left;
@@ -180,8 +188,11 @@
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 440px) {
     :host ng-select.voicemod-select {
         width: 100px;
+    }
+    :host .header .sort {
+        margin-left: 0px;
     }
 }

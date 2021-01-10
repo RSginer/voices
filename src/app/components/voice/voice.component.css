@@ -1,8 +1,9 @@
 :host .voice {
     display: block;
     float: left;
-    padding: 22px 22px;
+    width: 16.66%;
     position: relative;
+    margin-bottom: 40px;
 }
 
 :host .voice {
@@ -54,12 +55,32 @@
     align-items: center;
     cursor: pointer;
     position: absolute;
-    top: 27px;
-    right: 27px;
+    top: 0px;
+    right: 30px;
     border-radius: 100%;
     background-color: #d1d1d1;
 }
 
 :host .voice.favourite .voice-favourite, :host .voice.favourite .voice-icon {
     background-color: white;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1020px) {
+    :host .voice {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    :host .voice {
+        width: 33.3%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    :host .voice {
+        width: 50%;
+    }
 }
