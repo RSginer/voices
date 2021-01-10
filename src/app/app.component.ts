@@ -41,7 +41,6 @@ export class AppComponent implements OnInit {
     this.getVoicesService.getVoices().subscribe(
       (voices: Voice[]) => {
         this.voices = voices;
-        this.selectedVoice = voices[0];
         let tagId = 0;
 
         this.voices.map((voice) => voice.tags.map((tag) => {
