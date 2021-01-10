@@ -2,7 +2,7 @@
     background-color: #212121;
     display: flex;
     align-self: center;
-    padding: 10px 25px;
+    padding: 10px 20px;
     margin: 0 auto;
     max-width: 1006px;
     flex-direction: column;
@@ -37,14 +37,25 @@
 
 :host .header .left-side, :host .header .right-side {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 435px;
+}
+
+:host .header .left-side {
+    justify-content: flex-start;
+}
+
+:host .header .right-side {
+    justify-content: flex-end;
 }
 
 :host .reverse-icon {
     transform: rotate(180deg) scaleX(-1);
     
+}
+
+:host .header .filter-icon {
+    width: 28px;
 }
 
 /* search */
@@ -83,15 +94,20 @@
 
 :host .header .tags-filter, :host .sort {
     display: flex;
-    width: 170px;
+    width: 160px;
     justify-content: space-between;
     align-items: center;
+}
+
+:host .header .sort {
+    margin-left: 40px;
 }
 
 /* random */
 :host .random {
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 20px;
+    width: 32px;
 }
 
 /* select */
@@ -99,10 +115,10 @@
     width: 126px;
     background-color: black;
     border-radius: 5px;
-    padding-left: 20px;
+    padding-left: 15.4px;
     padding-top: 6px;
     padding-bottom: 6px;
-    padding-right: 20px;
+    padding-right: 15.4px;
     font-size: 14px;
 }
 
@@ -120,7 +136,7 @@
 }
 
 :host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
-    padding: 5px 20px;
+    padding: 5px 15.4px;
     border-top: 1px solid #282828;
 }
 
