@@ -5,7 +5,6 @@ import { Voice } from '../core/models/Voice';
 @Pipe({
     name: 'sortVoices'
 })
-
 export class SortPipe implements PipeTransform {
     transform(items: any, sortOption: number): any {
         switch (sortOption) {

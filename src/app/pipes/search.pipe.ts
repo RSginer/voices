@@ -4,7 +4,6 @@ import { Voice } from '../core/models/Voice';
 @Pipe({
   name: 'search'
 })
-
 export class SearchPipe implements PipeTransform {
   transform(items: Voice[], searchText: string | undefined, tag: string): any {
     if (!items) {
