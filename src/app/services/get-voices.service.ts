@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Voice } from '../core/models/Voice';
 
 @Injectable({
-    providedIn: "root"
+  providedIn: "root"
 })
 export class GetVoicesService {
   constructor(private http: HttpClient) { }

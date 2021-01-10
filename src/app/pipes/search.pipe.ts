@@ -24,9 +24,9 @@ export class SearchPipe implements PipeTransform {
       return items.filter(it => {
         return it.name.toLocaleLowerCase().includes(searchText || "");
       });
-    } 
+    }
 
-    
+
     return items;
 
   }

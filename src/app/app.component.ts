@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   activeSearch: string | undefined;
   sortOptions: ISortOption[] = [
     { id: 0, option: "Ascendent" },
-    { id: 1, option: "Descendent"}
+    { id: 1, option: "Descendent" }
   ];
   selectedSortOption = 0;
   tags: ITagFilter[] = [{ id: 0, tag: "All" }];
@@ -44,11 +44,11 @@ export class AppComponent implements OnInit {
         let tagId = 0;
 
         this.voices.map((voice) => voice.tags.map((tag) => {
-            tagId++;
+          tagId++;
 
-            if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag.toLocaleLowerCase() === tag.toLocaleLowerCase())) this.tags.push(
-              { id: tagId, tag: tag.charAt(0).toUpperCase() + tag.slice(1) })
-          }))
+          if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag.toLocaleLowerCase() === tag.toLocaleLowerCase())) this.tags.push(
+            { id: tagId, tag: tag.charAt(0).toUpperCase() + tag.slice(1) })
+        }))
 
         this.tags = [...this.tags];
       }, (err) => console.log(err))
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
     const filteredVoices = this.searchPipe.transform(this.voices, this.activeSearch, this.getCurrentTag(this.selectedTag) || "All")
     const index = Math.floor(Math.random() * filteredVoices.length);
     const randomVoiceId = filteredVoices[index].id;
-  
+
     this.selectedVoice = this.voices.find((voice) => voice.id === randomVoiceId);
   }
 
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
   }
 
   selectVoice(voice: Voice) {
-    if (this.selectedVoice === voice) 
+    if (this.selectedVoice === voice)
       this.selectedVoice = undefined;
     else
       this.selectedVoice = voice;

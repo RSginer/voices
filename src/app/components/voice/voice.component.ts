@@ -15,7 +15,7 @@ export class VoiceComponent {
   @Output() selectVoiceClick = new EventEmitter();
   favouriteIconVisible: boolean = false;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) { }
 
   getBackgroundImage() {
     return this.sanitizer.bypassSecurityTrustStyle(`background-image: url()`);
