@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Voice } from './core/models/Voice';
 import { GetVoicesService } from './services/get-voices.service';
 
-
 export interface ITagFilter {
   id: number;
   tag: string;

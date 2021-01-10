@@ -33,6 +33,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 :host .header .left-side, :host .header .right-side {
     display: flex;
     justify-content: space-between;
@@ -84,6 +85,7 @@
 /* random */
 :host .random {
     cursor: pointer;
+    margin-left: 10px;
 }
 
 /* select */
@@ -150,4 +152,30 @@
     background-repeat: no-repeat;
     width: 10px;
     height: 10px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 700px) {
+    :host .header {
+        display: block;
+        float: left;
+    }
+
+    :host .header .left-side {
+        display: block;
+        float: left;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    :host .header .right-side {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    :host ng-select.voicemod-select {
+        width: 100px;
+    }
 }
