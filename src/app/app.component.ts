@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
   selectedVoice: Voice | undefined;
   activeSearch: string | undefined;
   sortOptions: ISortOption[] = [
-    { id: 0, option: "A-Z" },
-    { id: 1, option: "Popular"}
+    { id: 0, option: "Ascendent" },
+    { id: 1, option: "Descendent"}
   ];
   selectedSortOption = 0;
   tags: ITagFilter[] = [{ id: 0, tag: "All" }];
@@ -44,18 +44,12 @@ export class AppComponent implements OnInit {
         this.selectedVoice = voices[0];
         let tagId = 0;
 
-        this.voices.map((voice) => {
-          
-          // Random popularity to sort later (I can't do with the provided data)
-          voice.popularity = Math.floor(Math.random() * 10);
-          
-          voice.tags.map((tag) => {
+        this.voices.map((voice) => voice.tags.map((tag) => {
             tagId++;
 
             if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag.toLocaleLowerCase() === tag.toLocaleLowerCase())) this.tags.push(
               { id: tagId, tag: tag.charAt(0).toUpperCase() + tag.slice(1) })
-          })
-        })
+          }))
 
         this.tags = [...this.tags];
       }, (err) => console.log(err))

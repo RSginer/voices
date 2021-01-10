@@ -12,7 +12,7 @@ export class SortPipe implements PipeTransform {
             case 0:
                 return items.sort((a: Voice, b: Voice) => a.name > b.name);
             case 1:
-                return items.sort((a: Voice, b: Voice) => a.popularity > b.popularity)
+                return items.sort((a: Voice, b: Voice) => a.name < b.name)
         }
     }
 }
