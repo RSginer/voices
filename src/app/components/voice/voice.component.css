@@ -5,7 +5,7 @@
 :host .voice {
     display: block;
     float: left;
-    padding: 15px 15px;
+    padding: 30px 30px;
     position: relative;
 }
 :host .voice {
@@ -16,12 +16,15 @@
 }
 
 :host .voice .voice-icon {
-    height: 110px;
-    width: 110px;
+    height: 125px;
+    width: 125px;
     border-radius: 100%;
     background-position: center;
     background-size: contain;
     background-color: #d1d1d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 :host .voice.selected .voice-icon {
@@ -47,8 +50,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 30px;
+    right: 30px;
     border-radius: 100%;
     background-color: #d1d1d1;
 }

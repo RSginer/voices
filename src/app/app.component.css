@@ -2,20 +2,20 @@
     background-color: #212121;
     display: flex;
     align-self: center;
-    padding: 25px;
+    padding: 10px 25px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1150px;
     flex-direction: column;
     border-radius: 6px;
 }
 
-:host .body-container {
+:host .container {
     width: 100%;
     max-width: 1160px;
     margin: 0 auto;
 }
 
-
+/* signature */
 :host .signature p {
     text-align: center;
     font-size: 11px;
@@ -34,8 +34,12 @@
     justify-content: space-between;
 }
 :host .header .left-side, :host .header .right-side {
-    display: block;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 /* search */
 :host .header .search-container {
@@ -55,7 +59,8 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 0px 10px;
-    margin-left: -15px;
+    margin-left: -30px;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -66,4 +71,19 @@
     text-align: center;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    width: 200px;
+    font-size: 16px;
 }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    background-image: url(/assets/select-arrow.svg);   /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: black;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+ }

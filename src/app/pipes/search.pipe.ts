@@ -6,7 +6,7 @@ import { Voice } from '../core/models/Voice';
 })
 
 export class SearchPipe implements PipeTransform {
-    transform(items: Voice[], searchText: string): any {
+    transform(items: Voice[], searchText: string | undefined): any {
         if (!items) {
             return [];
           }
@@ -16,7 +16,7 @@ export class SearchPipe implements PipeTransform {
           searchText = searchText.toLocaleLowerCase();
       
           return items.filter(it => {
-            return it.name.toLocaleLowerCase().includes(searchText);
+            return it.name.toLocaleLowerCase().includes(searchText || "");
           });
     }
 }

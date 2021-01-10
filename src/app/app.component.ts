@@ -12,6 +12,8 @@ export class AppComponent implements OnInit{
   voices: Voice[] = [];
   selectedVoice: Voice | undefined;
   activeSearch: string | undefined;
+  tags: string[] = [];
+  selectedTag: string | undefined;
 
   constructor(
     private getVoicesService: GetVoicesService
@@ -22,6 +24,10 @@ export class AppComponent implements OnInit{
     this.getVoicesService.getVoices().subscribe(
       (voices: Voice[]) => {
         this.voices = voices;
+
+        this.voices.map((voice) => voice.tags.map((tag) => {
+          if (!this.tags.includes(tag)) this.tags.push(tag)
+        }))
     }, (err) => console.log(err))
   }
 
@@ -33,5 +39,9 @@ export class AppComponent implements OnInit{
     } else {
       this.favouriteVoices = this.favouriteVoices.filter((v) => v.id !== voice.id)
     }
+  }
+
+  changeTag(tag: string) {
+    this.selectedTag = tag; 
   }
 }
