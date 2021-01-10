@@ -6,17 +6,28 @@ import { Voice } from '../core/models/Voice';
 })
 
 export class SearchPipe implements PipeTransform {
-  transform(items: Voice[], searchText: string | undefined): any {
+  transform(items: Voice[], searchText: string | undefined, tag: string): any {
     if (!items) {
       return [];
     }
-    if (!searchText) {
+    if (!searchText && tag === "All") {
       return items;
     }
-    searchText = searchText.toLocaleLowerCase();
 
-    return items.filter(it => {
-      return it.name.toLocaleLowerCase().includes(searchText || "");
-    });
+    if (tag !== "All") {
+      items = items.filter((item) => item.tags.includes(tag.toLocaleLowerCase()))
+    }
+
+    if (searchText) {
+      searchText = searchText.toLocaleLowerCase();
+
+      return items.filter(it => {
+        return it.name.toLocaleLowerCase().includes(searchText || "");
+      });
+    } 
+
+    
+    return items;
+
   }
 }

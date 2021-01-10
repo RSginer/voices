@@ -35,7 +35,9 @@ export class AppComponent implements OnInit{
 
         this.voices.map((voice) => voice.tags.map((tag) => {
           tagId++;
-          if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag === tag)) this.tags.push({id: tagId, tag:tag})
+
+          if (!this.tags.find((tagFilter: ITagFilter) => tagFilter.tag.toLocaleLowerCase() === tag.toLocaleLowerCase())) this.tags.push(
+            {id: tagId, tag:tag.charAt(0).toUpperCase() + tag.slice(1)})
         }))
 
         this.tags = [...this.tags];
@@ -53,13 +55,13 @@ export class AppComponent implements OnInit{
     }
   }
 
-  changeTag(tag: ITagFilter) {
-    this.selectedTag = tag; 
-  }
-
   randomSelection() {
     const index = Math.floor(Math.random() * this.voices.length);
 
     this.selectedVoice = this.voices[index];
+  }
+
+  getCurrentTag(selectedTagId: number) {
+    return this.tags.find((tag) => tag.id === selectedTagId)?.tag;
   }
 }
