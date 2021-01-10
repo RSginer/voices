@@ -137,21 +137,16 @@
     color: white;
 }
 
-:host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-select-container .ng-arrow-wrapper .ng-arrow {
-    background-image: url(/assets/select-arrow.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
-    transform: rotate(180deg);
-}
-
 :host ng-select.voicemod-select ::ng-deep .ng-select-container .ng-arrow-wrapper .ng-arrow {
     background-image: url(/assets/select-arrow.svg);
     background-position: center;
     background-repeat: no-repeat;
     width: 10px;
     height: 10px;
+}
+
+:host ng-select.voicemod-select.ng-select-opened ::ng-deep .ng-select-container .ng-arrow-wrapper .ng-arrow {
+    transform: rotate(180deg);
 }
 
 /* media queries */
